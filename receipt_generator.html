@@ -6,7 +6,7 @@
     <title>Skills Test - 1st Quarter | Coffee Shop</title>
 
     <!-- EXTERNAL CSS -->
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -15,14 +15,12 @@
     <!-- PyScript -->
     <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
     <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
-
-    
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0b2545;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000000;">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">
-                    Skewer
+                Skewer
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
@@ -43,61 +41,144 @@
             </div>
         </div>
     </nav>
+
     <div class="container py-5 flex-grow-1">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 col-lg-6">
 
                 <div class="card app-card">
                     <div class="card-header text-center">
-                        <i class="fa-solid fa-mug-hot fa-2x mb-2"></i>
-                        <h3 class="mb-0">OBMC Entrep Fair</h3>
-                        <small class="opacity-75">Group 1 &mdash; Coffee Shop</small>
+                        <i class="fa-solid fa-bug fa-2x mb-2"></i>
+                        <h3 class="mb-0"></h3>
+                        <img src="LOGO.png" alt="Coffee Shop Logo" style="width: 400px; height: auto;">
+                     
                     </div>
 
                     <div class="card-body p-4">
                         <h5 class="mb-3">
-                            <i class="fa-solid fa-list-check me-1"></i> Menu
+                            <i class="fa-solid fa-list-check me-1"></i> Items ✧₊⁺
                         </h5>
-
+                        
+                        <!-- ITEMS -->
                         <form id="order-form">
                             <div class="menu-item">
                                 <div>
                                     <input class="form-check-input" type="checkbox" id="item1" value="99">
-                                    <label id="item1-label" for="item1">Americano</label>
+                                    <label id="item1-label" for="item1">Chat Noir Hoodie</label>
                                 </div>
-                                <span class="price">₱99</span>
+                                <span class="price">€28</span>
                             </div>
 
                             <div class="menu-item">
                                 <div>
                                     <input class="form-check-input" type="checkbox" id="item2" value="129">
-                                    <label id="item2-label" for="item2">Spanish Latte</label>
+                                    <label id="item2-label" for="item2">Ladybug Hoodie</label>
                                 </div>
-                                <span class="price">₱129</span>
+                                <span class="price">€28</span>
                             </div>
 
                             <div class="menu-item">
                                 <div>
                                     <input class="form-check-input" type="checkbox" id="item3" value="189">
-                                    <label id="item3-label" for="item3">Cold Brew Malt</label>
+                                    <label id="item3-label" for="item3">Rena Rouge Hoodie</label>
                                 </div>
-                                <span class="price">₱189</span>
+                                <span class="price">€16</span>
                             </div>
 
                             <div class="menu-item">
                                 <div>
                                     <input class="form-check-input" type="checkbox" id="item4" value="159">
-                                    <label id="item4-label" for="item4">Affogato</label>
+                                    <label id="item4-label" for="item4">Miraculous Paris Tote Bag</label>
                                 </div>
-                                <span class="price">₱159</span>
+                                <span class="price">€10</span>
                             </div>
 
                             <div class="menu-item">
                                 <div>
                                     <input class="form-check-input" type="checkbox" id="item5" value="129">
-                                    <label id="item5-label" for="item5">Caramel Macchiato</label>
+                                    <label id="item5-label" for="item5">Ladybug Plushie</label>
                                 </div>
-                                <span class="price">₱129</span>
+                                <span class="price">€18</span>
+                            </div>
+
+                            <div class="menu-item">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="item6" value="129">
+                                    <label id="item6-label" for="item6">Chat Noir Plushie</label>
+                                </div>
+                                <span class="price">€18</span>
+                            </div>
+
+                            <div class="menu-item">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="item7" value="129">
+                                    <label id="item7-label" for="item7">Ladynoir Plushie</label>
+                                </div>
+                                <span class="price">€20</span>
+                            </div>
+
+                            <div class="menu-item">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="item8" value="129">
+                                    <label id="item8-label" for="item8">Bugnoir Plushie</label>
+                                </div>
+                                <span class="price">€20</span>
+                            </div>
+
+                            <div class="menu-item">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="item9" value="129">
+                                    <label id="item9-label" for="item9">Mr. Bug Plushie</label>
+                                </div>
+                                <span class="price">€20</span>
+                            </div>
+
+                            <div class="menu-item">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="item10" value="129">
+                                    <label id="item10-label" for="item10">Tikki Plushie</label>
+                                </div>
+                                <span class="price">€14</span>
+                            </div>
+
+                            <div class="menu-item">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="item11" value="129">
+                                    <label id="item11-label" for="item11">Plagg Plushie</label>
+                                </div>
+                                <span class="price">€14</span>
+                            </div>
+
+                            <div class="menu-item">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="item12" value="129">
+                                    <label id="item12-label" for="item12">Miraculous Plushie Blind Box</label>
+                                </div>
+                                <span class="price">€15</span>
+                            </div>
+
+                            <div class="menu-item">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="item13" value="129">
+                                    <label id="item13-label" for="item13">Ladybug Earrings</label>
+                                </div>
+                                <span class="price">€12</span>
+                            </div>
+
+                            <div class="menu-item">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="item14" value="129">
+                                    <label id="item14-label" for="item14">Chat Noir Ring</label>
+                                </div>
+                                <span class="price">€12</span>
+                            </div>
+
+                            <div class="menu-item">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="item15" value="129">
+                                    <label id="item15-label" for="item15">Miraculous Paris Poster</label>
+                                </div>
+                                <span class="price">€6</span>
                             </div>
 
                             <div class="d-grid mt-4">
@@ -115,7 +196,7 @@
                     </div>
 
                     <div class="card-footer text-center text-muted small py-3">
-                        Select your items and click "Create Order"
+                        Hi Miraculers! ♡ ︎Select your items and click "Create Order." Happy shopping! ( ˶ˆᗜˆ˵ )
                     </div>
                 </div>
 
@@ -123,18 +204,18 @@
         </div>
     </div>
 
-    <footer class="text-center text-light py-4" style="background-color: #0b2545;">
+    <footer class="text-center text-light py-4" style="background-color: #000000;">
         <div class="container">
             <p class="mb-1">
                 <i class="fa-solid fa-code me-1"></i>
-                SKU Generator &mdash; 1st Quarter Project
+                SKU Generator &mdash; 1st Quarter Project ♡ ︎
             </p>
         </div>
     </footer>
 
     <py-script src="main.py"></py-script>
 
-    <!-- Bootstrap JS bundle (needed for navbar toggle on mobile) -->
+    <!-- Bootstrap JS bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
