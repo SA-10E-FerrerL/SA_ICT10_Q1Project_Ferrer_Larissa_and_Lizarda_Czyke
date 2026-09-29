@@ -9,7 +9,7 @@ def SKU_generator(e):
 
     #Stops users from using select product or category in a SKU
     if category == "SAC" or product_name == "SAP":
-        display("Please select a category and product.", target="sku_output")
+        alert("Please select a category and product.")
         return
     
     sku = category[:3].upper() + product_name[:3].upper() + str(quantity)[:2]
