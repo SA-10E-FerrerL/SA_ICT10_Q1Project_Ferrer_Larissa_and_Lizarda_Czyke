@@ -1,14 +1,17 @@
-from unicodedata import category
-
 from pyscript import display, document
 #Basic thingy, the calm before the storm
 def SKU_generator(e):
     document.getElementById('sku_output').innerHTML = ""
 
-    category = document.getElementById("category").value
+    category = document.getElementById("category").valu
     product_name = document.getElementById("product_name").value
     quantity = document.getElementById("quantity").value
 
+    #Stops users from using select product or category in a SKU
+    if category == "SAC" or product_name == "SAP":
+        display("Please select a category and product.", target="sku_output")
+        return
+    
     sku = category[:3].upper() + product_name[:3].upper() + str(quantity)[:2]
 
     display("Your SKU is: " +sku, target="sku_output")
@@ -99,5 +102,4 @@ def create_order(e):
     #Here solely to allow line breaks after each item
     document.getElementById("order_summary").style.whiteSpace = "pre-line"
 
-    display(str(order) + "VAT: €" + str(tax) + "\nTotal Cost: €" + str(total_cost), target="order_summary")
-
+    display("Order Summary: \n" + str(order) + "VAT: €" + str(tax) + "\nTotal Cost: €" + str(total_cost) + "\nYour order has been processed, please shop with us again! :>", target="order_summary")
