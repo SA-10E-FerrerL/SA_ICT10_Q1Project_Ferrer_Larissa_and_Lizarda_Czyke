@@ -3,7 +3,7 @@ from pyscript import display, document
 def SKU_generator(e):
     document.getElementById('sku_output').innerHTML = ""
 
-    category = document.getElementById("category").valu
+    category = document.getElementById("category").value
     product_name = document.getElementById("product_name").value
     quantity = document.getElementById("quantity").value
 
