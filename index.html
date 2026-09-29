@@ -176,12 +176,13 @@ Your generated SKU will appear here.
 </div>
 
 </main>
-
+<!-- Here solely because it pmo that the categories don't actually categorize -->
 <script>
 
 quantity=document.getElementById("quantity")
 button=document.getElementById("button")
 
+// Grabs all the products so we can disable them when needed
 const categorySelect = document.getElementById("category");
 
 const SAC = document.querySelector('#category option[value="SAC"]');
@@ -201,11 +202,13 @@ const PP = document.querySelector('#product_name option[value="Plagg Plushie"]')
 const MPBB = document.querySelector('#product_name option[value="Miraculous Plushie Blind Box"]');
 const MPP = document.querySelector('#product_name option[value="Miraculous Paris Poster"]');
 
+// Grabs the categories so we can check which one is selected
 clothes=document.getElementById("Clothes")
 accessories=document.getElementById("Accessories")
 plushies=document.getElementById("Plushies")
 collectibles=document.getElementById("Collectibles")
 
+//Disables all the products that are not in the selected category
 function categorycheck() {
 
     SAP.disabled=true
@@ -296,8 +299,10 @@ function categorycheck() {
 }
 }
 
+// Calls the function when the category is changed
 categorySelect.addEventListener("change", categorycheck);
 
+// Makes it impossible for the user to generate a SKU without a stock quantity
 button.addEventListener("click",function stockchecker() {
     if (quantity.value.trim() === "") {
         alert("Please input a number for stock quantity.");
