@@ -151,7 +151,7 @@ Stock Quantity
 <!-- Cool Button -->
 <div class="d-grid">
 
-<input type="button" py-click="SKU_generator" value="Generate SKU" class="btn btn-generate btn-lg text-white" id="button">
+<input type="button" py-click="SKU_generator" value="Generate SKU" disabled class="btn btn-generate btn-lg text-white" id="button">
 
 </div>
 
@@ -303,11 +303,15 @@ function categorycheck() {
 categorySelect.addEventListener("change", categorycheck);
 
 // Makes it impossible for the user to generate a SKU without a stock quantity
+quantity.addEventListener("input", function buttonon () { 
+    button.disabled=false
+});
+
 button.addEventListener("click",function stockchecker() {
     if (quantity.value.trim() === "") {
         alert("Please input a number for stock quantity.");
-    }
-})
+    }}); 
+    
 
 
 </script>
