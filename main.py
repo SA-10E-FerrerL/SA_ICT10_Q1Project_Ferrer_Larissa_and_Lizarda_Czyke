@@ -1,4 +1,6 @@
 from pyscript import display, document
+from js import alert
+
 #Basic thingy, the calm before the storm
 def SKU_generator(e):
     document.getElementById('sku_output').innerHTML = ""
