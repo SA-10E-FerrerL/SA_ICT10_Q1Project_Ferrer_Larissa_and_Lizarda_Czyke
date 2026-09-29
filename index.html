@@ -97,17 +97,16 @@ Category
 
 <select id="category" class="form-select">
 
-<option value="Clothing">Clothing</option>
-<option value="Accessories">Accessories</option>
-<option value="Plushies">Plushies</option>
-<option value="Collectibles">Collectibles</option>
+<option value="SAC">Select a Category</option>
+<option value="Clothing" id="Clothes">Clothing</option>
+<option value="Accessories" id="Accessories">Accessories</option>
+<option value="Plushies" id="Plushies">Plushies</option>
+<option value="Collectibles" id="Collectibles">Collectibles</option>
 
 </select>
 
 </div>
 
-
-<!-- Product Name uwu WHO SAID THAT -->
 <div class="mb-3">
 
 <label for="product_name" class="form-label">
@@ -117,6 +116,7 @@ Product Name
 
 <select id="product_name" class="form-select">
 
+<option value="SAP">Select a Product</option>
 <option value="Chat Noir Hoodie">Chat Noir Hoodie</option>
 <option value="Ladybug Hoodie">Ladybug Hoodie</option>
 <option value="Rena Rouge Hoodie">Rena Rouge Hoodie</option>
@@ -135,8 +135,6 @@ Product Name
 </select>
 
 </div>
-
-
 <!-- Stock Quantity -->
 <div class="mb-4">
 
@@ -153,7 +151,7 @@ Stock Quantity
 <!-- Cool Button -->
 <div class="d-grid">
 
-<input type="button" py-click="SKU_generator" value="Generate SKU" class="btn btn-generate btn-lg text-white">
+<input type="button" py-click="SKU_generator" value="Generate SKU" class="btn btn-generate btn-lg text-white" id="button">
 
 </div>
 
@@ -179,6 +177,135 @@ Your generated SKU will appear here.
 
 </main>
 
+<script>
+
+quantity=document.getElementById("quantity")
+button=document.getElementById("button")
+
+const categorySelect = document.getElementById("category");
+
+const SAC = document.querySelector('#category option[value="SAC"]');
+const SAP = document.querySelector('#product_name option[value="SAP"]');
+const CNH = document.querySelector('#product_name option[value="Chat Noir Hoodie"]');
+const LBH = document.querySelector('#product_name option[value="Ladybug Hoodie"]');
+const RRH = document.querySelector('#product_name option[value="Rena Rouge Hoodie"]');
+const MPTB = document.querySelector('#product_name option[value="Miraculous Paris Tote Bag"]');
+const LBE = document.querySelector('#product_name option[value="Ladybug Earrings"]');
+const CNR = document.querySelector('#product_name option[value="Chat Noir Ring"]');
+const LBP = document.querySelector('#product_name option[value="Ladybug Plushie"]');
+const CNP = document.querySelector('#product_name option[value="Chat Noir Plushie"]');
+const LNP = document.querySelector('#product_name option[value="Ladynoir Plushie"]');
+const BNP = document.querySelector('#product_name option[value="Bugnoir Plushie"]');
+const TP = document.querySelector('#product_name option[value="Tikki Plushie"]');
+const PP = document.querySelector('#product_name option[value="Plagg Plushie"]');
+const MPBB = document.querySelector('#product_name option[value="Miraculous Plushie Blind Box"]');
+const MPP = document.querySelector('#product_name option[value="Miraculous Paris Poster"]');
+
+clothes=document.getElementById("Clothes")
+accessories=document.getElementById("Accessories")
+plushies=document.getElementById("Plushies")
+collectibles=document.getElementById("Collectibles")
+
+function categorycheck() {
+
+    SAP.disabled=true
+    SAC.disabled=true
+    CNH.disabled=false
+    LBH.disabled=false
+    RRH.disabled=false
+    MPTB.disabled=false
+    LBE.disabled=false
+    CNR.disabled=false
+    LBP.disabled=false
+    CNP.disabled=false
+    LNP.disabled=false
+    BNP.disabled=false
+    TP.disabled=false
+    PP.disabled=false
+    MPBB.disabled=false
+    MPP.disabled=false
+
+    if (clothes.selected) {
+    MPTB.disabled=true
+    LBE.disabled=true
+    CNR.disabled=true
+    LBP.disabled=true
+    CNP.disabled=true
+    LNP.disabled=true
+    BNP.disabled=true
+    TP.disabled=true
+    PP.disabled=true
+    MPBB.disabled=true
+    MPP.disabled=true
+}
+
+    if (accessories.selected) {
+    CNH.disabled=true
+    LBH.disabled=true
+    RRH.disabled=true
+    LBP.disabled=true
+    CNP.disabled=true
+    LNP.disabled=true
+    BNP.disabled=true
+    TP.disabled=true
+    PP.disabled=true
+    MPBB.disabled=true
+    MPP.disabled=true
+}
+    
+    if (plushies.selected) {
+    CNH.disabled=true
+    LBH.disabled=true
+    RRH.disabled=true
+    MPTB.disabled=true
+    LBE.disabled=true
+    CNR.disabled=true
+    MPP.disabled=true
+}
+
+    if (collectibles.selected) {
+    CNH.disabled=true
+    LBH.disabled=true
+    RRH.disabled=true
+    MPTB.disabled=true
+    LBE.disabled=true
+    CNR.disabled=true
+    LBP.disabled=true
+    CNP.disabled=true
+    LNP.disabled=true
+    BNP.disabled=true
+    TP.disabled=true
+    PP.disabled=true
+    MPBB.disabled=true
+}
+
+    if (collectibles.selected) {
+    CNH.disabled=true
+    LBH.disabled=true
+    RRH.disabled=true
+    MPTB.disabled=true
+    LBE.disabled=true
+    CNR.disabled=true
+    LBP.disabled=true
+    CNP.disabled=true
+    LNP.disabled=true
+    BNP.disabled=true
+    TP.disabled=true
+    PP.disabled=true
+    MPBB.disabled=true
+}
+}
+
+categorySelect.addEventListener("change", categorycheck);
+
+button.addEventListener("click",function stockchecker() {
+    if (quantity.value.trim() === "") {
+        alert("Please input a number for stock quantity.");
+    }
+})
+
+
+</script>
 
 <!-- Footer ( I realized this is how u comment on html again ). DO we need to add our names below or no -->
 <footer class="text-light text-center py-3">
